@@ -29,7 +29,11 @@ O usuário informa o estado do tempo hoje e quantos dias à frente deseja prever
 
 A matriz de transição $M$ define as probabilidades de mudança entre estados:
 
-$$M = \begin{bmatrix} 0.84 & 0.16 \\ 0.32 & 0.68 \end{bmatrix}$$
+|       | Sol  | Chuva |
+|-------|------|-------|
+| Sol   |  84% |  16%  |
+| Chuva |  32% |   68% |
+
 
 Para prever $n$ dias à frente, calcula-se $M^n$ via **diagonalização**:
 
