@@ -1,4 +1,4 @@
-# 🌤️ Previsão do Tempo com Cadeias de Markov
+# Previsão do Tempo com Cadeias de Markov
 
 Modelo probabilístico de previsão do tempo baseado em **Cadeias de Markov**, com visualizações interativas em Python.
 
@@ -6,7 +6,7 @@ Modelo probabilístico de previsão do tempo baseado em **Cadeias de Markov**, c
 
 ## Sobre o projeto
 
-A partir de uma matriz de transição entre os estados **Ensolarado** e **Chuvoso**, o modelo calcula a probabilidade do tempo em qualquer dia futuro — usando diagonalização de matrizes e álgebra linear.
+A partir de uma matriz de transição entre os estados **Ensolarado** e **Chuvoso**, o modelo calcula a probabilidade do tempo em qualquer dia futuro, usando diagonalização de matrizes e álgebra linear.
 
 O usuário informa o estado do tempo hoje e quantos dias à frente deseja prever. O sistema retorna as probabilidades e gráficos gerados automaticamente.
 
@@ -29,7 +29,11 @@ O usuário informa o estado do tempo hoje e quantos dias à frente deseja prever
 
 A matriz de transição $M$ define as probabilidades de mudança entre estados:
 
-$$M = \begin{bmatrix} 0.84 & 0.16 \\ 0.32 & 0.68 \end{bmatrix}$$
+|       | Sol  | Chuva |
+|-------|------|-------|
+| Sol   |  84% |  16%  |
+| Chuva |  32% |   68% |
+
 
 Para prever $n$ dias à frente, calcula-se $M^n$ via **diagonalização**:
 
